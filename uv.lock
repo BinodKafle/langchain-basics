@@ -365,6 +365,7 @@ dependencies = [
     { name = "langchain-community" },
     { name = "langchain-openai" },
     { name = "langchainhub" },
+    { name = "python-dotenv" },
     { name = "ruff" },
 ]
 
@@ -374,6 +375,7 @@ requires-dist = [
     { name = "langchain-community", specifier = ">=0.3.22" },
     { name = "langchain-openai", specifier = ">=0.3.14" },
     { name = "langchainhub", specifier = ">=0.1.21" },
+    { name = "python-dotenv", specifier = ">=1.1.0" },
     { name = "ruff", specifier = ">=0.11.7" },
 ]
 
