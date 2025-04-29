@@ -10,8 +10,7 @@ from output_parsers import summary_parser
 from scrapers.twitter import scrape_user_tweets
 
 
-def ice_break_with(name: str) -> None:
-    """Returns a greeting message"""
+def gather_information(name: str) -> None:
     linkedin_profile_url = linkedin_lookup_agent(name=name)
     linkedin_data = scrape_linkedin_profile(linkedin_profile_url)
 
@@ -45,4 +44,4 @@ def ice_break_with(name: str) -> None:
 
 if __name__ == "__main__":
     load_dotenv()
-    ice_break_with(name="Binod Kafle")
+    gather_information(name="Binod Kafle")
