@@ -15,11 +15,11 @@ load_dotenv()
 
 
 def twitter_lookup_agent(name: str) -> str:
-    llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0)
+    llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
 
     template = """
-       given the name {name_of_person} I want you to find a link to their Twitter profile page, and extract from it their username
-       In Your Final answer only the person's username"""
+           given the name {name_of_person} I want you to find a link to their Twitter profile page, and extract from it their username
+           In Your Final answer only the person's username"""
 
     prompt_template = PromptTemplate(
         template=template, input_variables=["name_of_person"]
@@ -42,8 +42,6 @@ def twitter_lookup_agent(name: str) -> str:
     )
 
     twitter_username = result["output"]
-    print("Twitter look up agent result:")
-    print(twitter_username)
     return twitter_username
 
 
